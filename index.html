@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thematic</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <nav class="nav-container">
+      <div class="nav-column">
+        <h1 id="title">Thematic</h1>
+        <button class="button-24">Upgrade Plan</button>
+      </div> 
+      <input type="text" class="search" placeholder="Search">
+      <div class="nav-column">
+        <ul>
+          <li><a href="sowlution_test_15\error.html">Discover</a></li>
+          <li><a href="sowlution_test_15\error.html">Songs</a></li>
+          <li><a href="sowlution_test_15\error.html">Playlist</a></li>
+          <li><a href="sowlution_test_15\error.html">120 Points</a></li>
+        </ul>
+        <div class="dropdown">
+          <button class="premium-dropdown">Premium Creator</button>
+          <div class="dropdown-content">
+            <button id="switchChannelBtn">Switch Channel</button>
+            <a href="#">Licenses & Downloads</a>
+            <a href="#">My Playlists</a>
+            <a href="#">Trackfluencer</a>
+            <a href="#">Points</a>
+            <a href="#">Settings</a>
+            <a href="#">Logout</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <div id="switchChannelModal" class="modal-switch">
+    <div class="modal-content">
+      <span class="close" id="switchChannelClose">&times;</span>
+      <h3>Protect your YouTube videos from copyright claims 🤖</h3>
+      <p>Add your channel ID or video link</p>
+      <p>See how to find your channel ID here</p>
+      <input type="text" id="channelInput" placeholder="Enter your channel ID or video link">
+      <button id="saveChannelBtn">Save</button>
+    </div>
+  </div>
+  <main>
+    <div class="seperator"></div>
+    <div class="container">
+    <div class="playlist-container"> 
+    </div>
+    <div  class="seperator"></div>
+
+    <div id="popupModal" class="modal">
+      <div class="modal-content">
+        <span class="close" id="close">&times;</span>
+        <h3>Description</h3>
+        <textarea id="descriptionInput" rows="4"></textarea>
+        <div class="button-container">
+          <button id="saveDescriptionBtn">Save</button>
+         
+        </div>
+      </div>
+    </div>
+    <div></div>
+    <div class="songs-table-wrapper">
+    <table id="songsTable">
+      <thead>
+        <tr>
+          <th class="pic_h" style="text-align: center;">Song/Artist</th>
+          <th></th>
+          <th style="text-align: center;">Date Added</th>
+          <th style="text-align: center;">Length</th>
+          <th style="text-align: center;">Playlist</th>
+          <th style="text-align: center;">Download</th>
+          
+        </tr>
+      </thead>
+      <tbody class="table_body">
+
+      </tbody>
+    </table></div></div>
+    <button id="showMoreButton">Show More</button>
+  
+  </main>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

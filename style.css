@@ -1,0 +1,481 @@
+nav {
+    height: 50px;
+    background-color: #000000;
+  }
+  
+  .nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+  }
+  
+  .search {
+    display: flex;
+    align-items: center;
+    width: 30rem;
+    padding: 0.8rem;
+    border-radius: 100vh;
+    transition: width ease 0.3s;
+    background-color: white;
+    border: solid 1px gray;
+    position: relative;
+    text-align: center;
+  }
+  
+  .nav-column {
+    font-family: "Roboto", sans-serif;
+    display: flex;
+    align-items: center;
+  }
+  
+  .nav-column ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-column ul li {
+    display: inline;
+    margin-right: 20px;
+  }
+  
+  .nav-column ul li:last-child {
+    margin-right: 0;
+  }
+  
+  h1 {
+    color: white;
+    margin: 0;
+  }
+  
+  @media only screen and (max-width: 768px) {
+    .nav-column ul,
+    .search {
+      display: none;
+    }
+    .nav-container {
+      flex-direction: column;
+      padding: 10px;
+    }
+    .nav-column {
+      width: 100%;
+      justify-content: left;
+      margin-top: 10px;
+    }
+    .nav-column ul {
+      text-align: center;
+    }
+    .nav-column ul li {
+      display: block;
+      margin-bottom: 10px;
+      margin-right: 0;
+    }
+    h1 {
+      text-align: center;
+    }
+  }
+  
+  .body {
+    font-family: "Roboto", sans-serif !important;
+  }
+  
+  .button-24 {
+    background: #ecff42;
+    border-radius: 50px;
+    color: #000000;
+    margin-left: 10px;
+    font-weight: 400;
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+    display: block;
+    font-family: "Roboto", sans-serif;
+    font-weight: 600;
+    height: 1.5rem;
+    outline: none;
+    font-style: normal;
+    border: none;
+    border-radius: 1.9rem;
+    transition: all .2s ease 0s;
+    cursor: pointer;
+    margin: 20px auto;
+  }
+  
+  table {
+    font-family: "Roboto", sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  th,
+  td {
+    padding: 8px;
+  }
+  
+  th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+    text-align: left;
+  }
+  
+  td {
+    text-align: center;
+  }
+  
+  td:nth-child(2) {
+    text-align: left;
+  }
+  
+  .songs-table-wrapper {
+    overflow-x: auto;
+    overflow-y: hidden;
+    margin-right: 120px;
+    margin-left: 120px;
+  }
+  
+  div {
+    display: block;
+  }
+  
+  .title-input {
+    border: none;
+    outline: none;
+    padding: 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+    background: transparent;
+    color: inherit;
+  }
+  
+  .table_img {
+    width: 100px;
+    max-width: 60%;
+    height: auto;
+    display: block;
+    margin-left: 20px;
+  }
+  
+  .playlist-container {
+    font-family: "Roboto", sans-serif;
+    display: inline-flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2rem;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  }
+  
+  #showMoreButton {
+    font-weight: 400;
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+    display: block;
+    min-height: 2.2rem;
+    outline: none;
+    font-style: normal;
+    border: none;
+    border-radius: 1.9rem;
+    transition: all .2s ease 0s;
+    cursor: pointer;
+    background-color: #2cb57e;
+    color: #fff;
+    margin: 20px auto;
+  }
+  
+  .container {
+    text-align: center;
+  }
+  
+  .playlist-image {
+    border-radius: 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 20px;
+    margin-left: 10px;
+    justify-content: flex-start;
+  }
+  
+  .playlist-image img {
+    width: 100%;
+    margin: 0;
+  }
+  
+  .seperator {
+    margin-top: 50px;
+  }
+  
+  .playlist-image {
+    width: 200px;
+  }
+  
+  .playlist-image img {
+    width: 100%;
+  }
+  
+  .playlist-details {
+    margin: 20px;
+    text-align: left;
+  }
+  
+  .description {
+    font-size: var(--fs-m);
+    font-weight: 300;
+    font-style: italic;
+    margin-bottom: 1rem;
+    width: 300px;
+    color: #959595;
+  }
+  
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.6);
+    text-align: left;
+    font-family: "Roboto", sans-serif;
+  }
+  
+  h3 {
+    display: block;
+    font-size: 1.17em;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: 500;
+    padding: 0;
+    margin-top: 2rem;
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .modal-content {
+    overflow-wrap: break-word;
+    overflow: hidden;
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+   
+  }
+  
+  a{
+    color: white;
+    font-size: inherent;
+    text-decoration: none;
+  }
+  input[type="text"] {
+    width: 200px;
+  }
+  
+  #descriptionInput {
+    width: 300px;
+  }
+  
+  #saveDescriptionBtn,
+  #saveChannelBtn {
+    font-weight: 400;
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+    display: inline-block;
+    min-height: 2.2rem;
+    bottom: 2rem;
+    outline: none;
+    font-style: normal;
+    border: none;
+    border-radius: 1.9rem;
+    transition: all .2s ease 0s;
+    cursor: pointer;
+    background-color: #2cb57e;
+    color: #fff;
+    margin-top: 20px;
+  }
+  
+  .savePlaylist {
+    font-weight: 400;
+    text-align: center;
+    display: inline-block;
+    min-height: 1.5rem;
+    bottom: 2rem;
+    outline: none;
+    font-style: normal;
+    border: none;
+    border-radius: 1.9rem;
+    transition: all .2s ease 0s;
+    cursor: pointer;
+    background-color: #2cb57e;
+    color: #fff;
+    margin-top: 20px;
+  }
+  
+  .textarea#descriptionInput {
+    width: 500px !important;
+    height: 149px !important;
+  }
+  
+  .button-save {
+    margin-top: 30px;
+  }
+  
+  button.edit {
+    border: none;
+    outline: none;
+    font-style: italic;
+    color: rgb(94, 94, 184);
+    background-color: white;
+  }
+  
+  .description-text {
+    width: 300px;
+    color: rgb(94, 94, 184);
+  }
+  
+  .song-title-table {
+    font-size: var(--fs-l-05-head) !important;
+    font-weight: 600 !important;
+    color: var(--clr-gray-dark) !important;
+    transition: color ease .2s;
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+    padding: 0;
+  }
+  
+  body {
+    --clr-gray: #878787;
+    --clr-gray-accent: #eaeaea;
+    --clr-gray-dark: #414141;
+  }
+  
+  th {
+    border-bottom: 0.01rem solid #d3d3d3;
+    font-style: oblique;
+    font-weight: 200;
+    text-align: left;
+    font-size: 1.15rem;
+    color: #000;
+    padding-block: 0.5rem;
+    display: table-cell;
+    vertical-align: inherit;
+  }
+  
+  table {
+    border-collapse: separate;
+    text-indent: initial;
+    border-spacing: 2px;
+  }
+  
+  .table_title {
+    font-size: var(--fs-l-05-head) !important;
+    font-weight: 600 !important;
+    color: var(--clr-gray-dark) !important;
+    transition: color ease .2s;
+    margin: 0;
+    padding: 0;
+  }
+  
+  table {
+    background-color: #f5e7e7;
+  }
+  
+  .premium-dropdown {
+    background: none;
+    font-family: "Roboto", sans-serif;
+    color: white;
+    font-size: inherit;
+    margin-left: 10px;
+    border: 1px solid #ff1493;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    margin-left: 10px;
+    display: none;
+    position: absolute;
+    background-color: #000;
+    min-width: 160px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+  
+  #switchChannelBtn {
+    font-size: inherit;
+  }
+  
+  .dropdown-content a,
+  #switchChannelBtn {
+    color: #fff;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #333;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  .dropdown:hover .premium-dropdown {
+    background-color: #333;
+  }
+  
+  .modal-switch {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .modal-switch .modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 400px;
+    border-radius: 10px;
+    text-align: center;
+  }
+  
+  .modal-switch .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .modal-switch .close:hover,
+  .modal-switch .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  #switchChannelBtn {
+    background-color: #000;
+  }
+  
